@@ -69,7 +69,7 @@ descs_df = pd.DataFrame(np.array(descs).reshape(-1,1), columns = list("d"))
 cnx = MySQLConnection(**dbconfig)
 cursor = cnx.cursor()
 
-insert_wData = 'INSERT INTO weather_data_scrape (period, temp) VALUES(%s, %s)' %(period_df, )
+insert_wData = 'INSERT INTO weather_data_scrape (period, temp) VALUES(%s, %s)' %(period_df,temps_df)
 
 cursor.execute(insert_wData)
 
